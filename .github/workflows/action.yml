@@ -8,11 +8,9 @@ jobs:
     steps:
       - name: Hello World t16b
         run: echo "Hello World"
-        
-      - name: Verifica o repositório do Git
-        uses: actions/checkout@v3
 
-        - uses: actions/setup-node@v3
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
         with:
           node-version: '14'
 

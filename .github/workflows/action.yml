@@ -1,0 +1,9 @@
+name: learn-github-actions
+on: [push]
+
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hello World t16b
+        run: echo "Hello World"

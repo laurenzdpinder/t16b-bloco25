@@ -1,9 +1,23 @@
-name: learn-github-actions
-on: [push]
+name: Aula da T16B
+on:
+  push
 
 jobs:
-  hello:
+  typecheck:
     runs-on: ubuntu-latest
     steps:
       - name: Hello World t16b
         run: echo "Hello World"
+
+      - name: Verifica o repositório do Git
+        uses: actions/checkout@v3
+
+        - uses: actions/setup-node@v3
+        with:
+          node-version: '14'
+
+      - name: Instalar as dependências
+        run: npm install
+
+      - name: Executando o linter
+        run: npx eslint .

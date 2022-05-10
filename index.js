@@ -13,4 +13,4 @@ app.get('/env', (req, res) => {
   res.status(200).json({ ok: true, port: NODE_ENV });
 });
 
-app.listen(PORT, () => console.log(`listening on port ${PORT}`))
+app.listen(PORT, () => console.log(`listening on port ${PORT}`));
